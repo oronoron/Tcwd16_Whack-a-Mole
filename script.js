@@ -11,7 +11,7 @@ function whackGame() {
           var point = 0;
           $($mole).on('click', function (){
           point++
-          $('#drawScore').html(score);
+          // $('#drawScore').html(score);
           $($mole).remove()
           $('[data-js=”hole”]').empty();
           console.log(point);
