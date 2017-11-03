@@ -10,27 +10,12 @@ function whackGame() {
         }
           var point = 0;
           $($mole).on('click', function (){
-          // point++;
-          $('drawScore').data('point', 0);
-          $('drawScore').html(function(){
-              var $this = $(this);
-                  point = $this.data('point') + 1;
-
-                  $this.data('point', point);
-                  return point;
-              });
+          point++
+          $('#drawScore').html(score);
           $($mole).remove()
-          // $("#drawScore").html(point++);
-
           $('[data-js=”hole”]').empty();
-
-          // point++;
           console.log(point);
 
-
-          // function addScore() {
-          //
-          // }
           setTimeout(function () {
           whackGame();
           }, Math.floor(Math.random() * 1000));
